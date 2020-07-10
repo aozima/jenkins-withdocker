@@ -2,6 +2,8 @@ FROM jenkins/jenkins:lts
 MAINTAINER miiro@getintodevops.com
 USER root
 
+ADD ./sources.list /etc/apt/sources.list
+
 # Install the latest Docker CE binaries
 RUN apt-get update && \
     apt-get -y install apt-transport-https \
